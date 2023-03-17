@@ -1,16 +1,13 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import { BsPersonCircle } from "react-icons/bs";
+import { SiCodechef } from "react-icons/si";
 const Navbar = ({ profileInfo }) => {
   return (
-    <section className=" bg-white shadow-md">
+    <section className=" bg-white shadow-md sticky top-0">
       <div className=" container mx-auto py-4 flex justify-between items-center">
-        <h1>HomeIcon</h1>
-        <ul className="flex gap-8">
-          <NavLink>Home</NavLink>
-          <NavLink>About</NavLink>
-          <NavLink>Contact</NavLink>
-        </ul>
+        <h1 className=" font-bold text-orange-700 flex items-end gap-2">
+          <SiCodechef className="text-4xl" />
+          <p className="w-24 leading-4">Everyone Can Cook</p>
+        </h1>
         <div className=" flex items-center gap-2">
           <div className=" text-sm text-end">
             <p>{profileInfo.name}</p>
