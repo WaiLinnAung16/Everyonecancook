@@ -1,20 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.signInCard{
-    @apply w-[800px] px-10 py-20 bg-white rounded-sm shadow-md flex justify-center items-center gap-12
+.signInCard {
+  @apply w-[800px] px-10 py-20 bg-white rounded-sm shadow-md flex justify-center items-center gap-12;
 }
-.input-container{
-    @apply  flex flex-col items-start gap-1
+.input-container {
+  @apply flex flex-col items-start gap-1;
 }
-.label{
-    @apply text-sm font-bold text-gray-800/50 block
+.label {
+  @apply text-sm font-bold text-gray-800/50 block;
 }
-.input{
-    @apply w-full outline-none pl-3 py-2 rounded-sm border hover:bg-gray-100 focus:border-orange-700
+.input {
+  @apply w-full outline-none pl-3 py-2 rounded-sm border hover:bg-gray-100 focus:border-orange-700;
 }
-.btn{
-   @apply py-2 text-white font-semibold bg-orange-600 rounded-sm transition-all hover:bg-orange-700 hover:scale-95
+.btn {
+  @apply py-2 text-white font-semibold bg-orange-600 rounded-sm transition-all hover:bg-orange-700 hover:scale-95;
+}
+.passwordBtn {
+  @apply w-7 h-7 p-1 rounded-full bottom-2 right-3 hover:bg-gray-200;
 }

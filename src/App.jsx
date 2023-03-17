@@ -1,10 +1,17 @@
-import React from 'react'
-import SignIn from './pages/SignIn'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import SignIn from "./pages/SignIn";
 
 const App = () => {
   return (
-    <div className='min-h-screen bg-[#fafafa] flex justify-center items-center gap-20'><SignIn/></div>
-  )
-}
+    <div className="min-h-screen bg-[#fafafa]">
+      <Routes>
+        <Route path="/" element={<SignIn />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </div>
+  );
+};
 
-export default App
+export default App;

@@ -1,30 +1,99 @@
-import React from 'react'
-import login from '../assets/login.svg'
+import React, { useRef, useState } from "react";
+import login from "../assets/login.svg";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+import { Link, useNavigate } from "react-router-dom";
 const SignIn = () => {
-  return (
-    <div className='signInCard'>
-        <div className=''>
-            <img src={login} alt="Login svg" className=' h-[300px]'/>
-        </div>
-        <div className='w-[400px] flex flex-col gap-5'>
-            <h1 className=' text-2xl font-bold'>Sign In</h1>
-            <div className='input-container'>
-            <label htmlFor="name" className='label'>Name</label>
-            <input type="text" id='name' placeholder='Wai Linn Aung' className='input'/>
-            </div>
-            <div className='input-container'>
-            <label htmlFor="email" className='label'>Email</label>
-            <input type="email" id='email' placeholder='example@gmail.com' className='input'/>
-            </div>
-            <div className='input-container'>
-            <label htmlFor="password" className='label'>Password</label>
-            <input type="password" id='password' placeholder='random words' className='input'/>
-            </div>
-            <button className='btn'>SignIn</button>
-        </div>
-        
-    </div>
-  )
-}
+  let [show, setShow] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
-export default SignIn
+  const navigate = useNavigate();
+  const navigateHandler = () => {
+    navigate("/home", {
+      state: { name: name, email: email },
+    });
+  };
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    navigateHandler();
+  };
+
+  const showHandler = () => {
+    setShow((show = !show));
+    let password = document.getElementById("password");
+    show ? (password.type = "text") : (password.type = "password");
+  };
+  return (
+    <section className="h-screen flex justify-center items-center">
+      <div className="signInCard">
+        <div className="">
+          <img src={login} alt="Login svg" className=" h-[300px]" />
+        </div>
+        <form
+          onSubmit={(e) => onSubmitHandler(e)}
+          className="w-[400px] flex flex-col gap-5"
+        >
+          <h1 className=" text-2xl font-bold">Sign In</h1>
+          <div className="input-container">
+            <label htmlFor="name" className="label">
+              Name
+            </label>
+            <input
+              // ref={nameRef}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              type="text"
+              id="name"
+              placeholder="Wai Linn Aung"
+              className="input"
+            />
+          </div>
+          <div className="input-container">
+            <label htmlFor="email" className="label">
+              Email
+            </label>
+            <input
+              // ref={emailRef}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              type="email"
+              id="email"
+              placeholder="example@gmail.com"
+              className="input"
+            />
+          </div>
+          <div className="input-container  relative">
+            <label htmlFor="password" className="label">
+              Password
+            </label>
+            <input
+              type="password"
+              required
+              id="password"
+              placeholder="You and God know"
+              className="input"
+            />
+            <AiOutlineEyeInvisible
+              className={`passwordBtn ${!show ? "absolute" : "hidden"}`}
+              onClick={() => showHandler()}
+            />
+            <AiOutlineEye
+              className={`passwordBtn ${show ? "absolute" : "hidden"}`}
+              onClick={() => showHandler()}
+            />
+          </div>
+          <button className="btn" type="submit">
+            SignIn
+          </button>
+          <p className=" text-sm text-center underline cursor-pointer">
+            Now only God know?
+          </p>
+        </form>
+      </div>
+    </section>
+  );
+};
+
+export default SignIn;
