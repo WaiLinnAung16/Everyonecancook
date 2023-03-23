@@ -3,14 +3,18 @@ import { StataContextCustom } from "../Context/StateContext";
 import Card from "./Card";
 
 const Content = () => {
-  const {mealLists} = StataContextCustom();
+  const { mealLists } = StataContextCustom();
   console.log(mealLists.meals);
   const meals = mealLists.meals;
-  return <div className="min-h-screen ml-[300px]">
-    <div className=" flex flex-col gap-5 p-5">
-    {meals?.map((meal)=><Card key={meal.idMeal} meal={meal}/>)}
+  return (
+    <div className="min-h-screen ml-[300px] bg-[#f0f0f0]">
+      <div className=" grid grid-cols-6 gap-5 p-5">
+        {meals?.map((meal) => (
+          <Card key={meal.idMeal} meal={meal} />
+        ))}
+      </div>
     </div>
-  </div>;
+  );
 };
 
 export default Content;

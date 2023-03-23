@@ -2,7 +2,7 @@ import React from "react";
 import { SiCodechef } from "react-icons/si";
 const Navbar = ({ profileInfo }) => {
   return (
-    <section className=" bg-white shadow-md sticky top-0">
+    <section className=" bg-white shadow-md sticky top-0 z-10">
       <div className=" container mx-auto py-4 flex justify-between items-center">
         <h1 className=" font-bold text-orange-700 flex items-end gap-2">
           <SiCodechef className="text-4xl" />
