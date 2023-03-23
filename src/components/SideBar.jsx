@@ -17,7 +17,7 @@ const SideBar = () => {
           <input
             type="text"
             placeholder="Search"
-            className=" outline-none bg-transparent w-[85%] hover:border-b placeholder:font-bold placeholder:text-gray-900"
+            className=" outline-none bg-transparent w-[85%] placeholder:font-bold placeholder:text-gray-900 hover:tracking-wide"
           />
         </Nav>
         <Nav>
