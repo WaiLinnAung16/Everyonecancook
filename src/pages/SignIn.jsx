@@ -1,7 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import login from "../assets/login.svg";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { SiCodechef } from "react-icons/si";
 const SignIn = () => {
   let [show, setShow] = useState(false);
   const [name, setName] = useState("");
@@ -26,9 +27,10 @@ const SignIn = () => {
   return (
     <section className="h-screen flex justify-center items-center">
       <div className="signInCard">
-        <div className="">
+        <div>
           <img src={login} alt="Login svg" className=" h-[300px]" />
         </div>
+
         <form
           onSubmit={(e) => onSubmitHandler(e)}
           className="w-[400px] flex flex-col gap-5"
@@ -45,7 +47,7 @@ const SignIn = () => {
               required
               type="text"
               id="name"
-              placeholder="Wai Linn Aung"
+              placeholder="Anonymous"
               className="input"
             />
           </div>

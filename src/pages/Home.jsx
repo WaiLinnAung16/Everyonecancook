@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className="w-full">
       <Navbar profileInfo={infos} />
-      <section className="">
+      <section className="container mx-auto">
         <SideBar />
         <Content />
       </section>

@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 .signInCard {
-  @apply w-[800px] px-10 py-20 bg-white rounded-sm shadow-md flex justify-center items-center gap-12;
+  @apply w-[800px] px-10 py-24 bg-white rounded-sm shadow-md flex justify-center items-center gap-12;
 }
 .input-container {
   @apply flex flex-col items-start gap-1;

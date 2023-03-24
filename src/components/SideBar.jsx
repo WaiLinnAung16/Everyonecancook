@@ -1,31 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiOutlineHome } from "react-icons/hi";
 import { BsSearch } from "react-icons/bs";
-import { BiFoodMenu } from "react-icons/bi";
-import { Link } from "react-router-dom";
+
 import Nav from "./Nav";
 import Categories from "./Categories";
+import { StateContextCustom } from "../Context/StateContext";
+import { VscSignOut } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 const SideBar = () => {
+  const { setName } = StateContextCustom();
   return (
     <section className="w-[300px] h-screen fixed">
       <ul className=" flex flex-col items-center my-5 gap-2">
-        <Nav>
-          <HiOutlineHome className="text-2xl" />
-          <p className="font-bold">Home</p>
-        </Nav>
         <Nav>
           <BsSearch className="text-2xl" />
           <input
             type="text"
             placeholder="Search"
-            className=" outline-none bg-transparent w-[85%] placeholder:font-bold placeholder:text-gray-900 hover:tracking-wide"
+            onChange={(e) => setName(e.target.value)}
+            className=" outline-none bg-transparent w-[85%] font-semibold placeholder:font-bold placeholder:text-gray-900 hover:tracking-wide"
           />
         </Nav>
-        <Nav>
-          <BiFoodMenu className="text-2xl" />
-          <p className="font-bold">Menu</p>
-        </Nav>
-        <Categories/>
+        <Categories />
+        <Link to={"/"} className="w-full">
+          <Nav>
+            <VscSignOut className="text-2xl" />
+            <p className="font-bold">Sign Out</p>
+          </Nav>
+        </Link>
       </ul>
     </section>
   );
