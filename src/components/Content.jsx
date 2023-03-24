@@ -1,17 +1,20 @@
 import React from "react";
-import { StataContextCustom } from "../Context/StateContext";
+import { StateContextCustom } from "../Context/StateContext";
 import Card from "./Card";
+import Loading from "./Loading";
 
 const Content = () => {
-  const { mealLists } = StataContextCustom();
-  console.log(mealLists.meals);
+  const { mealLists } = StateContextCustom();
+  // console.log(mealLists.meals);
   const meals = mealLists.meals;
   return (
     <div className="min-h-screen ml-[300px] bg-[#f0f0f0]">
       <div className=" grid grid-cols-6 gap-5 p-5">
-        {meals?.map((meal) => (
-          <Card key={meal.idMeal} meal={meal} />
-        ))}
+        {
+          meals?.map((meal) => (
+            <Card key={meal.idMeal} meal={meal} />
+          )) 
+        }
       </div>
     </div>
   );

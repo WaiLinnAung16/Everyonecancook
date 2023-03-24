@@ -13,9 +13,9 @@ const Home = () => {
     console.log(infos);
   }, [setInfos]);
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <Navbar profileInfo={infos} />
-      <section className="container mx-auto">
+      <section className="">
         <SideBar />
         <Content />
       </section>

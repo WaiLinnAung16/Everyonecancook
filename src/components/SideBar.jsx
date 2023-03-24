@@ -4,6 +4,7 @@ import { BsSearch } from "react-icons/bs";
 import { BiFoodMenu } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Nav from "./Nav";
+import Categories from "./Categories";
 const SideBar = () => {
   return (
     <section className="w-[300px] h-screen fixed">
@@ -24,6 +25,7 @@ const SideBar = () => {
           <BiFoodMenu className="text-2xl" />
           <p className="font-bold">Menu</p>
         </Nav>
+        <Categories/>
       </ul>
     </section>
   );

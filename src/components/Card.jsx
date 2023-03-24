@@ -21,7 +21,7 @@ const Card = ({ meal }) => {
         </div>
       </div>
       <div className="flex justify-between items-center">
-        <h1 className=" text-2xl">{meal.strMeal}</h1>
+        <h1 className=" text-xl">{meal.strMeal}</h1>
         <div className=" flex gap-2">
           <div className="p-2 ring-2 ring-orange-500 text-gray-800 font-bold tracking-wider rounded-full transition duration-300 hover:bg-orange-500 hover:text-white ">
             <FaStar className="text-xl" />
