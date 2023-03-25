@@ -40,10 +40,13 @@ export const StateContextProvider = ({ children }) => {
     const data = await api.json();
     console.log(name);
     setMealLists(data);
+    setLoading(false)
   };
   useEffect(() => {
-    name ? fetchName() : fetchData();
+    name ? (setLoading(true),fetchName()) : fetchData();
   }, [name]);
+
+  
   const data = {
     mealLists,
     categories,

@@ -1,6 +1,6 @@
 import React from "react";
 import { SiCodechef } from "react-icons/si";
-const Navbar = ({ profileInfo }) => {
+const Navbar = () => {
   return (
     <section className=" bg-white shadow-md sticky top-0 z-10">
       <div className=" container mx-auto py-5 flex justify-between items-center">
@@ -10,8 +10,8 @@ const Navbar = ({ profileInfo }) => {
         </h1>
         <div className=" flex items-center gap-2">
           <div className=" text-sm text-end">
-            <p>{profileInfo.name}</p>
-            <p>{profileInfo.email}</p>
+            <p>Name</p>
+            <p>Name@gmail.com</p>
           </div>
           <div className=" w-10 h-10 rounded-full overflow-hidden ring-2 ring-orange-800 ring-offset-2">
             <img

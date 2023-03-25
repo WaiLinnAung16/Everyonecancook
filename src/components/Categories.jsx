@@ -15,7 +15,7 @@ const Categories = () => {
         name="category"
         id="category"
         onChange={(e) => handelOption(e)}
-        className="bg-transparent outline-none w-[80%] font-bold"
+        className="bg-transparent outline-none w-[80%] font-bold cursor-pointer"
       >
         {categories?.map((cat) => (
           <option key={cat.idCategory} value={cat.strCategory}>
