@@ -27,12 +27,12 @@ const SideBar = () => {
           />
         </Nav>
         <Categories />
-        <Link to={"/"} className="w-full">
+        {/* <Link to={"/"} className="w-full">
           <Nav>
             <VscSignOut className="text-2xl" />
             <p className="font-bold">Sign Out</p>
           </Nav>
-        </Link>
+        </Link> */}
       </ul>
     </section>
   );

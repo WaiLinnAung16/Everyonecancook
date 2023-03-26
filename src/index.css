@@ -21,3 +21,19 @@
 .passwordBtn {
   @apply w-7 h-7 p-1 rounded-full bottom-2 right-3 hover:bg-gray-200;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  .custom-scrollbar{
+    scrollbar-width: auto;
+    scrollbar-color: #d7d7d7;
+  }
+
+  /* Chrome, Edge, and Safari */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d7d7d7;
+    border-radius: 10px;
+  }
