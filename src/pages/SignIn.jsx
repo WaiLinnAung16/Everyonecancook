@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import login from "../assets/login.svg";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import { SiCodechef } from "react-icons/si";
+
 const SignIn = () => {
   let [show, setShow] = useState(false);
   const [name, setName] = useState("");

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {  useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Content from "../components/Content";
 import Navbar from "../components/Navbar";
 import SideBar from "../components/SideBar";
@@ -14,7 +14,7 @@ const Home = () => {
   }, [setInfos]);
   return (
     <div className="w-full">
-      <section className=" xl:w-full 2xl:container 2xl:mx-auto">
+      <section className="">
         <SideBar />
         <Content />
       </section>

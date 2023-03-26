@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { HiOutlineHome } from "react-icons/hi";
 import { BsSearch } from "react-icons/bs";
-
 import Nav from "./Nav";
 import Categories from "./Categories";
 import { StateContextCustom } from "../Context/StateContext";
@@ -12,6 +11,12 @@ const SideBar = () => {
   return (
     <section className="w-[300px] h-screen fixed">
       <ul className=" flex flex-col items-center my-5 gap-2">
+        <Link to={"/"} className="w-full">
+          <Nav>
+            <HiOutlineHome className="text-2xl" />
+            <p className="font-bold">Home</p>
+          </Nav>
+        </Link>
         <Nav>
           <BsSearch className="text-2xl" />
           <input

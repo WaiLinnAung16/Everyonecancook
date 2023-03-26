@@ -1,19 +1,20 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Search from "./components/Search";
+import SideBar from "./components/SideBar";
+import Detail from "./pages/Detail";
 import Home from "./pages/Home";
-import SignIn from "./pages/SignIn";
 
 const App = () => {
   return (
     <div className="min-h-screen bg-[#fafafa]">
       <Navbar />
-      <Routes>
-        {/* <Route path="/" element={<SignIn />} /> */}
-        <Route path="/" element={<Home />} />
-        {/* <Route path="/search" element={<Search />} /> */}
-      </Routes>
+      <div className="xl:w-full 2xl:container 2xl:mx-auto">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/detail/:id" element={<Detail />} />
+        </Routes>
+      </div>
     </div>
   );
 };
