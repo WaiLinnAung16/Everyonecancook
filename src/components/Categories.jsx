@@ -18,6 +18,9 @@ const Categories = () => {
         onChange={(e) => handelOption(e)}
         className="bg-transparent outline-none w-[80%] font-bold cursor-pointer"
       >
+        <option defaultValue="Beef" value="Beef" className="text-slate-300">
+          Categories
+        </option>
         {categories?.map((cat) => (
           <option key={cat.idCategory} value={cat.strCategory}>
             {cat?.strCategory}
