@@ -8,7 +8,7 @@ const Content = () => {
   // console.log(mealLists.meals);
   const meals = mealLists.meals;
   return (
-    <div className="min-h-screen ml-[300px] bg-[#f0f0f0]">
+    <div className="min-h-screen lg:ml-[230px] xl:ml-[300px] bg-[#f0f0f0]">
       <div className=" grid grid-cols-6 gap-5 p-5">
         {loading ? (
           <Loading />

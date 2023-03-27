@@ -4,9 +4,10 @@ import { StateContextCustom } from "../Context/StateContext";
 import Nav from "./Nav";
 
 const Categories = () => {
-  const { categories, setCategory } = StateContextCustom();
+  const { categories, setCategory, setShowSidebar } = StateContextCustom();
   const handelOption = (e) => {
     setCategory(e.target.value);
+    setShowSidebar(false);
   };
   return (
     <Nav>

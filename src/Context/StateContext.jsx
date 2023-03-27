@@ -8,6 +8,7 @@ export const StateContextProvider = ({ children }) => {
   const [category, setCategory] = useState("Beef");
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const fetchCategory = async () => {
     const api = await fetch(
@@ -49,10 +50,12 @@ export const StateContextProvider = ({ children }) => {
   const data = {
     mealLists,
     categories,
+    showSidebar,
     setCategories,
     setCategory,
     loading,
     setName,
+    setShowSidebar,
   };
   return <StateContext.Provider value={data}>{children}</StateContext.Provider>;
 };
